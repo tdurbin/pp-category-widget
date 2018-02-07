@@ -1,28 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
-    button {
-        background-color: #f68a1f;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 4px;
-        cursor: pointer;
-        border-radius: 4px;
-        -webkit-transition-duration: 0.4s;
-        /* Safari */
-        transition-duration: 0.4s;
-        font-family: "Myriad pro", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
-    }
+body {
+margin : 10px;
+padding: 2px;
+background : #f0f0f0;
+}
+#title {
+padding: 2px;
+font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+font-size: 24px;
+}
+button {
+    background-color: #f68a1f;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	  border-radius: 4px;
+	  -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+	  font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+}
+button:hover {
+    background-color: #da7009;
+    color: white;
+}
 
-    button:hover {
-        background-color: #da7009;
-        color: white;
-    }
+input {
+
+    padding: 12px 20px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+	  font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+}
+input:focus {
+    border: 3px solid #555;
+}
+
+label {
+
+	  font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+}
+
+textarea {
+
+    padding: 10px 10px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+	  font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+}
+textarea:focus {
+    border: 3px solid #555;
+}
+#text {
+padding: 2px;
+font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+}
 </style>
 
 <head>
@@ -36,8 +83,7 @@
 
     <form id="foo" name="foo">
         <!-- style="display:block" -->
-        <br>
-        <label for="Level1">Level 1</label><br>
+        <label for="Level1">Level 1: </label>
         <select id="Level1" name="Level1">
                     <option value="Bet Queries (Exchange)">Bet Queries (Exchange)</option>
                     <option value="Bet Queries (Sportsbook)">Bet Queries (Sportsbook)</option>
@@ -48,7 +94,7 @@
                 </select>
         <br>
         <br>
-        <label for="Level2">Level 2</label><br>
+        <label for="Level2">Level 2: </label>
         <select id="Level2" name="Level2">
                     <option value="Cash Out Availability">Cash Out Availability</option>
                     <option value="Cash Out Settlement Query">Cash Out Settlement Query</option>
@@ -60,7 +106,7 @@
                 </select>
         <br>
         <br>
-        <label for="Level3">Level 3</label><br>
+        <label for="Level3">Level 3: </label>
         <select id="Level3" name="Level3">
                     <option value="Football">Football</option>
                     <option value="Golf">Golf</option>
@@ -72,15 +118,15 @@
                 </select>
         <br>
         <br>
-        <label for="yesno">Change Y/N</label><br>
-        <input type="radio" name="yesno" value="Yes" /> Yes<br/>
-        <input type="radio" name="yesno" value="No" /> No <br/>
-        <input type="radio" name="yesno" value="N/A" checked="checked" /> N/A
+        <label for="yesno">Change Y/N: </label>
+        <input type="radio" name="yesno" value="Yes"/> Yes
+        <input type="radio" name="yesno" value="No"/> No
+        <input type="radio" name="yesno" value="N/A" checked="checked"/> N/A
 
         <br>
         <br>
-
-        <textarea id="comments" name="comments" rows="10" cols="30">Comments here:</textarea>
+        <label for="comments">Agent Comments: </label><br>
+        <textarea id="comments" name="comments" rows="8" cols="33"></textarea>
         <br>
         <br>
 
