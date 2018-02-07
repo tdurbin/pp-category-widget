@@ -2,9 +2,11 @@
 <html lang="en">
 <style>
 body {
-margin : 10px;
-padding: 2px;
-background : #f0f0f0;
+    margin : 10px;
+    padding: 2px;
+    background : #f0f0f0;
+    font-size: 14px;
+    font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
 }
 #title {
 padding: 2px;
@@ -61,6 +63,7 @@ textarea {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
+    font-size: 12px;
 	  font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
 }
 textarea:focus {
@@ -131,14 +134,14 @@ font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","
         <br>
 
         <button id="mybutton" type="button" onclick="sendData()">Categorise Conversation</button>
+        <br>
+        <br>
         <div id="alert"></div>
-        <br>
-        <br>
 
     </form>
     <script>
         function sendData() {
-            document.getElementById("alert").innerHTML = "...sending data...";
+            document.getElementById("alert").innerHTML = "Sending categorisation data...";
             document.getElementById("alert").style = "color : red";
             var Level1 = $("#Level1").val();
             var Level2 = $("#Level2").val();
@@ -150,7 +153,7 @@ font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","
             xhr.addEventListener("readystatechange", function() {
                 if (this.readyState === 4) {
                     // var jsonResult = JSON.parse(this.responseText);
-                    document.getElementById("alert").innerHTML = "done!";
+                    document.getElementById("alert").innerHTML = "Categorisation saved!";
                     document.getElementById("alert").style = "color : green";
                 }
             });
